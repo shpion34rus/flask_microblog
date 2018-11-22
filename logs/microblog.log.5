@@ -1,0 +1,138 @@
+2018-11-19 23:42:40,712 ERROR: Exception on /explore [GET] [in C:\microblog\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "C:\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\microblog\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\microblog\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\microblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\microblog\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\microblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\microblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\microblog\app\routes.py", line 52, in explore
+    return render_template("index.html", title='Explore', posts=posts.items)
+  File "C:\microblog\venv\lib\site-packages\flask\templating.py", line 135, in render_template
+    context, ctx.app)
+  File "C:\microblog\venv\lib\site-packages\flask\templating.py", line 117, in _render
+    rv = template.render(context)
+  File "C:\microblog\venv\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "C:\microblog\venv\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "C:\microblog\venv\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\microblog\venv\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "C:\microblog\app\templates\index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\microblog\app\templates\base.html", line 32, in top-level template code
+    {% block content %}{% endblock %}
+  File "C:\microblog\app\templates\index.html", line 6, in block "content"
+    {{ form.hidden_tag() }}
+  File "C:\microblog\venv\lib\site-packages\jinja2\environment.py", line 430, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'form' is undefined
+2018-11-19 23:45:32,656 INFO: Microblog startup [in C:\microblog\microblog.py:49]
+2018-11-19 23:46:59,031 INFO: Microblog startup [in C:\microblog\microblog.py:49]
+2018-11-19 23:48:24,204 INFO: Microblog startup [in C:\microblog\microblog.py:49]
+2018-11-19 23:50:10,688 INFO: Microblog startup [in C:\microblog\microblog.py:49]
+2018-11-19 23:54:15,149 INFO: Microblog startup [in C:\microblog\microblog.py:49]
+2018-11-19 23:55:28,070 INFO: Microblog startup [in C:\microblog\microblog.py:49]
+2018-11-22 21:28:08,656 INFO: Microblog startup [in C:\microblog\microblog.py:49]
+2018-11-22 21:29:39,102 INFO: Microblog startup [in C:\microblog\microblog.py:49]
+2018-11-22 21:29:41,174 ERROR: Exception on /login [GET] [in C:\microblog\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "C:\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\microblog\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\microblog\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\microblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\microblog\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\microblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\microblog\app\routes.py", line 48, in login
+    return render_template('login.html', title='Sign In', form=form)
+  File "C:\microblog\venv\lib\site-packages\flask\templating.py", line 135, in render_template
+    context, ctx.app)
+  File "C:\microblog\venv\lib\site-packages\flask\templating.py", line 117, in _render
+    rv = template.render(context)
+  File "C:\microblog\venv\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "C:\microblog\venv\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "C:\microblog\venv\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\microblog\venv\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "C:\microblog\app\templates\login.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\microblog\app\templates\base.html", line 32, in top-level template code
+    {% block content %}{% endblock %}
+  File "C:\microblog\app\templates\login.html", line 25, in block "content"
+    <p>Forgot Your Password?<a href="{{ url_for('reset_password_request') }}">Click to Reset It</a></p>
+  File "C:\microblog\venv\lib\site-packages\flask\helpers.py", line 356, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "C:\microblog\venv\lib\site-packages\flask\app.py", line 2061, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "C:\microblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\microblog\venv\lib\site-packages\flask\helpers.py", line 345, in url_for
+    force_external=external)
+  File "C:\microblog\venv\lib\site-packages\werkzeug\routing.py", line 1776, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'reset_password_request'. Did you mean 'edit_profile' instead?
+2018-11-22 21:31:21,329 INFO: Microblog startup [in C:\microblog\microblog.py:49]
+2018-11-22 21:31:26,333 ERROR: Exception on /login [GET] [in C:\microblog\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "C:\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\microblog\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\microblog\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\microblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\microblog\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\microblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\microblog\app\routes.py", line 48, in login
+    return render_template('login.html', title='Sign In', form=form)
+  File "C:\microblog\venv\lib\site-packages\flask\templating.py", line 135, in render_template
+    context, ctx.app)
+  File "C:\microblog\venv\lib\site-packages\flask\templating.py", line 117, in _render
+    rv = template.render(context)
+  File "C:\microblog\venv\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "C:\microblog\venv\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "C:\microblog\venv\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\microblog\venv\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "C:\microblog\app\templates\login.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\microblog\app\templates\base.html", line 32, in top-level template code
+    {% block content %}{% endblock %}
+  File "C:\microblog\app\templates\login.html", line 25, in block "content"
+    <p>Forgot Your Password?<a href="{{ url_for('reset_password_request') }}">Click to Reset It</a></p>
+  File "C:\microblog\venv\lib\site-packages\flask\helpers.py", line 356, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "C:\microblog\venv\lib\site-packages\flask\app.py", line 2061, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "C:\microblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\microblog\venv\lib\site-packages\flask\helpers.py", line 345, in url_for
+    force_external=external)
+  File "C:\microblog\venv\lib\site-packages\werkzeug\routing.py", line 1776, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'reset_password_request'. Did you mean 'edit_profile' instead?

@@ -1,0 +1,7 @@
+*.pyc
+*~
+__pycache__
+venv
+.idea
+/app/______templates
+/app/__pycache__
